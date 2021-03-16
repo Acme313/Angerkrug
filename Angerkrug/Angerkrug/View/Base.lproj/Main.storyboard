@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fM3-z2-2OO">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Speisekarte-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Angerkrug" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GASTHOF ANGER KRUG" translatesAutoresizingMaskIntoConstraints="NO" id="XJ3-wW-ab8">
+                                <rect key="frame" x="0.0" y="44" width="390" height="154"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="154" id="G6X-Z8-luh"/>
+                                    <constraint firstAttribute="width" constant="390" id="Yl4-r6-3me"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4uQ-z8-Jdq">
+                                <rect key="frame" x="0.0" y="198" width="390" height="563"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="foodCell" rowHeight="89" id="MZC-KF-xM7">
+                                        <rect key="frame" x="0.0" y="28" width="390" height="89"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MZC-KF-xM7" id="NjC-vA-z5m">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="89"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gericht" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FnE-A8-oRr">
+                                                    <rect key="frame" x="30" y="11" width="81" height="29"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Preis" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="px9-4A-NwX">
+                                                    <rect key="frame" x="328" y="34" width="38" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Zutaten" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rnF-uc-GzA">
+                                                    <rect key="frame" x="30" y="48" width="274" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="7ou-rd-U5J"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Q9m-Cw-Yl2"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XJ3-wW-ab8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5k5-XH-jnM"/>
+                            <constraint firstItem="XJ3-wW-ab8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DUJ-DR-tMr"/>
+                            <constraint firstItem="4uQ-z8-Jdq" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="F1g-sI-2Bc"/>
+                            <constraint firstItem="4uQ-z8-Jdq" firstAttribute="top" secondItem="XJ3-wW-ab8" secondAttribute="bottom" id="Hfw-J5-ael"/>
+                            <constraint firstItem="XJ3-wW-ab8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="M5B-x4-KPe"/>
+                            <constraint firstItem="4uQ-z8-Jdq" firstAttribute="leading" secondItem="XJ3-wW-ab8" secondAttribute="leading" id="MGB-en-oQQ"/>
+                            <constraint firstItem="XJ3-wW-ab8" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="MYE-Jh-Peh"/>
+                            <constraint firstItem="4uQ-z8-Jdq" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="NAV-tf-lEP"/>
+                            <constraint firstItem="XJ3-wW-ab8" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="NQN-zN-9sJ"/>
+                            <constraint firstItem="4uQ-z8-Jdq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Oj6-8h-Piq"/>
+                            <constraint firstItem="4uQ-z8-Jdq" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Oro-eI-CaS"/>
+                            <constraint firstItem="4uQ-z8-Jdq" firstAttribute="top" secondItem="XJ3-wW-ab8" secondAttribute="bottom" id="PdQ-5C-Vuv"/>
+                            <constraint firstItem="4uQ-z8-Jdq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QdS-pw-BGI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4uQ-z8-Jdq" secondAttribute="trailing" id="dSW-il-t2r"/>
+                            <constraint firstItem="XJ3-wW-ab8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="g2i-RY-DLS"/>
+                            <constraint firstItem="XJ3-wW-ab8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hgZ-ev-itz"/>
+                            <constraint firstItem="4uQ-z8-Jdq" firstAttribute="trailing" secondItem="XJ3-wW-ab8" secondAttribute="trailing" id="j3y-sL-Hho"/>
+                            <constraint firstItem="4uQ-z8-Jdq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jSn-if-kLw"/>
+                            <constraint firstItem="XJ3-wW-ab8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="m1p-OJ-C4P"/>
+                            <constraint firstItem="4uQ-z8-Jdq" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="qBJ-TT-HNe"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Speisekarte" image="table" catalog="system" id="LJv-8A-VwB"/>
+                    <navigationItem key="navigationItem" id="xpP-FX-EuQ"/>
+                    <connections>
+                        <outlet property="foodTableView" destination="4uQ-z8-Jdq" id="F0c-hY-uuu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="760" y="103.7914691943128"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="8u9-cl-qgP">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="fM3-z2-2OO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LMc-0c-UhV">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="rz5-Dx-0Dy"/>
+                        <segue destination="uys-7S-Jc2" kind="relationship" relationship="viewControllers" id="9K2-Pc-0jD"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="INf-Id-YbR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-196.92307692307691" y="103.7914691943128"/>
+        </scene>
+        <!--Warenkorb-->
+        <scene sceneID="eFN-KA-fAS">
+            <objects>
+                <viewController id="uys-7S-Jc2" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wTh-iY-9Bt">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GASTHOF ANGER KRUG" translatesAutoresizingMaskIntoConstraints="NO" id="lRH-C4-dI9">
+                                <rect key="frame" x="0.0" y="44" width="390" height="154"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="154" id="5Bz-DN-a56"/>
+                                    <constraint firstAttribute="width" constant="390" id="If0-nr-FOL"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bnq-qu-xl5">
+                                <rect key="frame" x="128" y="681" width="134" height="30"/>
+                                <state key="normal" title="Send via WhatsApp"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="swS-P7-e5W"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lRH-C4-dI9" firstAttribute="trailing" secondItem="swS-P7-e5W" secondAttribute="trailing" id="abE-wG-iVa"/>
+                            <constraint firstItem="lRH-C4-dI9" firstAttribute="top" secondItem="swS-P7-e5W" secondAttribute="top" id="bHf-lX-Xo8"/>
+                            <constraint firstItem="bnq-qu-xl5" firstAttribute="centerX" secondItem="wTh-iY-9Bt" secondAttribute="centerX" id="eLu-WI-vcQ"/>
+                            <constraint firstItem="lRH-C4-dI9" firstAttribute="leading" secondItem="swS-P7-e5W" secondAttribute="leading" id="nF5-AU-iGy"/>
+                            <constraint firstItem="lRH-C4-dI9" firstAttribute="centerX" secondItem="wTh-iY-9Bt" secondAttribute="centerX" id="w05-dy-bXE"/>
+                            <constraint firstItem="swS-P7-e5W" firstAttribute="bottom" secondItem="bnq-qu-xl5" secondAttribute="bottom" constant="50" id="zZs-md-a5P"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Warenkorb" image="tray" catalog="system" id="NnG-jI-C1Z"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1k9-7r-FFz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-197" y="860"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="GASTHOF ANGER KRUG" width="939" height="274"/>
+        <image name="table" catalog="system" width="128" height="93"/>
+        <image name="tray" catalog="system" width="128" height="88"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
